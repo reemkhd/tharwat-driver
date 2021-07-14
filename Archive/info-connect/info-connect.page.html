@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>info_connect</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-label dir='rtl' color="primary" floating> اسم من يسلم الطلب</ion-label>
+  <ion-item>
+    <ion-input [(ngModel)]="info_connect.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type='number' [(ngModel)]="info_connect.numberphone"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input (click)="selectLocation()" readonly place placeholder="Select Location"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-datetime [(ngModel)]="info_connect.birth_date" min="2021-01-01" max="2040-01-01" displayFormat="YYYY MM DD">
+    </ion-datetime>
+  </ion-item>
+  <ion-button (click)="submit()" mode="ios" expand="block" color="green" fill="outline" class="ion-margin-top">ارسال
+  </ion-button>
+</ion-content>

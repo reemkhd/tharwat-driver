@@ -1,0 +1,39 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div style="height: 40px"></div>
+    <div class="img-right" style="padding-bottom: 20px; text-align: center">
+      <img
+        class="img-right"
+        src="../../../assets/tharwat1.png"
+        width="160mm"
+        height="80mm"
+      />
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="grid1">
+    <ion-row class="row1">
+      <ion-col>
+        <ion-button
+          href="/driver/orders"
+          class="ion-button"
+          expand="block"
+          color="white"
+          >الطلبات</ion-button
+        >
+        <!-- <ion-button  href="" class="ion-button2"   expand="block" color="white" ></ion-button> -->
+        <ion-button
+          (click)="logout()"
+          class="ion-button3"
+          expand="block"
+          color="white"
+          >تسجيل الخروج</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-button href="/orders">Orders</ion-button> -->
+</ion-content>

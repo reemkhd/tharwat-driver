@@ -1,0 +1,32 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>rest</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-grid class="grid1">
+    <ion-row class="row1">
+        <ion-col>
+        </ion-col>
+    </ion-row>
+    <ion-row class="row2">
+        <ion-col>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+<ion-slide >
+  <form #form="ngForm" (ngSubmit)="reset(form)" method="post">
+        <p>
+            استرجاع كلمة المرور
+        </p>
+    <ion-item>
+      <ion-label   dir="rtl" position="floating">البريدالإكتروني</ion-label>
+      <ion-input type="email" ngModel name="email"></ion-input>
+    </ion-item>
+
+      <ion-button type="submit" color="medium" fill="solid" expand="full">متابعة</ion-button>
+</form>
+<ion-slide >
+
+

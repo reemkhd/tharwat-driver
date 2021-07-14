@@ -1,0 +1,36 @@
+<ion-content>
+  <ion-grid class="grid1">
+  <ion-list>
+    <div>
+
+
+      <ion-item *ngFor="let order of order_info " (click)="presentModal()">
+
+          <ion-avatar slot="start">
+            <img
+              src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png"
+            />
+          </ion-avatar>
+
+          <ion-label>
+            <h2>{{ order.order_number }}</h2>
+            <br>
+            <p>{{ order.status }}</p>
+            <br>
+
+            <div *ngFor="let connect of connect_info">
+            <div *ngIf="order.order_number == connect.order_number">
+              <p>{{ connect.birth_date }} - {{ connect.time }}</p><br>
+            </div>
+          </div>
+
+          </ion-label>
+
+      </ion-item>
+
+
+
+    </div>
+  </ion-list><br>
+  </ion-grid>
+</ion-content>

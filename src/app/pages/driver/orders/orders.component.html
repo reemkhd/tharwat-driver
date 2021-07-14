@@ -1,0 +1,30 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <div style="height: 40px"></div>
+    <div class="img-right" style="padding-bottom: 20px; text-align: center">
+      <img
+        class="img-right"
+        src="../../../../assets/tharwat1.png"
+        width="160mm"
+        height="80mm"
+      />
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <!-- Tab bar -->
+    <ion-tab-bar slot="top" selectedTab="new">
+      <ion-tab-button tab="new"> الطلبات الجديدة </ion-tab-button>
+      <ion-tab-button tab="history"> الطلبات القديمة </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

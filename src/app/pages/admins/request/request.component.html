@@ -1,0 +1,79 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div style="height: 40px"></div>
+    <div class="img-right" style="padding-bottom: 20px; text-align: center">
+      <img
+        class="img-right"
+        src="../../../../assets/tharwat1.png"
+        width="160mm"
+        height="80mm"
+      />
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="grid1 row1">
+    <ion-row style="padding: 14px">
+      <ion-col class="content">
+        <ion-row>
+          <div style="width: 100%" class="center bold fheading">
+            User Request
+          </div>
+        </ion-row>
+        <br />
+        <ion-row>
+          <ion-col class="bold">Name</ion-col>
+          <ion-col>Neel Khamar</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="bold">Time</ion-col>
+          <ion-col>12/06/2021 06:35 PM</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="bold">Location</ion-col>
+          <ion-col>Sargasan</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="bold">District</ion-col>
+          <ion-col>Gandhinagar</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="bold">Phone Number</ion-col>
+          <ion-col>+91-9558279465</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="bold">Request ID</ion-col>
+          <ion-col>#100</ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <ion-button
+          (click)="presentActionSheet()"
+          type="button"
+          fill="solid"
+          class="accept"
+        >
+          Accept
+        </ion-button>
+        <ion-button type="button" fill="solid" class="reject">
+          Reject
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="pd5">
+      <ion-col>
+        <ion-button
+          (click)="dismiss()"
+          class="ion-button"
+          expand="block"
+          color="white"
+        >
+          Close
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

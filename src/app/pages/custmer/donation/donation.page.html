@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title >قائمة التبرعات</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="grid1">
+      <ion-row class="row1">
+          <ion-col>
+          </ion-col>
+      </ion-row>
+      <ion-row class="row2">
+          <ion-col>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+  <ion-slide >
+  <div class="contaier-login" [formGroup]="addmore" dir="rtl">
+    <ng-container formArrayName="lessons">
+      <ng-container *ngFor="let lessonForm of lessons.controls; let i = index">
+        <div [formGroupName]="i">
+          <ion-select formControlName="kind" placeholder="اختر تصنيف التبرع" interface="action-sheet" expand="block">
+            <ion-select-option value="furniture">الاثاث المنزلي</ion-select-option>
+            <ion-select-option value="clothes">ملابس</ion-select-option>
+            <ion-select-option value="dishes">الأواني المنزلية</ion-select-option>
+            <ion-select-option value="electrical_tools">الأدوات الكهربائية</ion-select-option>
+            <ion-select-option value="baby_things">مستلزمات الأطفال</ion-select-option>
+            <ion-select-option value="luxuries">الكماليات</ion-select-option>
+            <ion-select-option value="accessories_and_mobiles">إكسسوارات نسائية وجوالات</ion-select-option>
+            <ion-select-option value="medical_devices">أجهزة طبية</ion-select-option>
+            <ion-select-option value="miscellaneous">متفرقات</ion-select-option>
+          </ion-select>
+          <ion-input formControlName="type" placeholder="النوع" expand="block"></ion-input>
+          <ion-input formControlName='number' placeholder="العدد" expand="block"></ion-input>
+
+          <ion-button (click)="addOrder(i)" [disabled]="!lessonForm.valid" mode="ios" color="medium " class="roundedInput8px ion-margin-top button">إضافة صنف آخر</ion-button>
+          <div *ngIf='i!=0'>
+            <ion-button (click)="deleteOrder(i)" mode="ios" color="medium" class="roundedInput8px ion-margin-top button">حذف</ion-button>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+
+    <div [hidden]="!inboundClick">
+      <ion-button (click)="add()" id="addButton" mode="ios"  expand="block" color="light" class="roundedInput8px ion-margin-top">إضافة صنف</ion-button>
+    </div>
+    <div>
+      <ion-button (click)="submit()" [disabled]="!addmore.valid" id="send1" mode="ios" expand="block" color="medium" fill="outline" class="roundedInput8px ion-margin-top button-bottom">
+        إرسال
+      </ion-button></div>
+  </div>
+ 
+  
+
+</ion-slide >
+</ion-content>

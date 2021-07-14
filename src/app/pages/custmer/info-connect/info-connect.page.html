@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title dir='rtl'>معلومات التواصل</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="donation"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="grid1">
+    <ion-row class="row1">
+        <ion-col>
+        </ion-col>
+    </ion-row>
+    <ion-row class="row2">
+        <ion-col>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+  <ion-list>
+    <div class="contaier-login"  [formGroup]="addmore" dir="rtl">
+      <ion-item>
+        <ion-input formControlName="name"  placeholder="اسم من يسلم الطلب"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName='numberphone'  placeholder="رقم جوال من يسلم الطلب"></ion-input>
+        <p *ngIf="addmore.controls['numberphone'].errors && addmore.controls['numberphone'].dirty">أدخل رقم جوال صحيح</p>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName='neighborhood_name'  placeholder="اسم الحي"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName='street_name'  placeholder="اسم الشارع"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName='house_number'  placeholder="رقم المنزل"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input formControlName='nearest_landmark'  placeholder="أقرب معلم"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-datetime formControlName='birth_date' placeholder="تاريخ الاستلام " min="2021-01-01" max="2040-12-31" displayFormat="MM DD"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-segment color="tertiary" formControlName="time">
+          <ion-segment-button  value='صباح'>
+            <ion-label>صباح</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value='مساء' >
+            <ion-label>مساء</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-item>
+    </div>
+
+    <!-- <ion-button (click)="onSubmit()" [disabled]="!addmore.valid" mode="ios" expand="block" color="medium" fill="outline" class="roundedInput8px ion-margin-top button-bottom">
+      إرسال
+    </ion-button> -->
+    <ion-button (click)="onSubmit()" [disabled]="!addmore.valid" expand="block" color="medium" fill="outline" class="roundedInput8px ion-margin-top button-bottom">إرسال</ion-button>
+  </ion-list>
+
+</ion-content>  

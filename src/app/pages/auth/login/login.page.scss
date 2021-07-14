@@ -1,0 +1,58 @@
+// .login{
+//     font-size:.388cm;
+//     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+//     text-align: center;
+//     position: relative;
+//     overflow: hidden;
+//     margin-top: 30px;
+// }
+.ion-no-border{
+    height: 9%;
+    padding: 0px;
+    align-items:center;
+}
+.img-right{
+    text-align: center;
+    // margin-right:50cm;
+    margin-left: .3cm;
+}
+.grid1 {
+    height: 95%;
+    padding: 0px;
+}
+.contaier-login {
+    width: 90%;
+    padding: 17px;
+    background: #fffffffb;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(228, 228, 228, 0.541);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(228, 222, 222, 0.822);
+    box-shadow: 0px 0px 10px 1px rgba(228, 217, 217, 0.75);
+}
+.row1 {
+    height: 190%;
+    margin-top: 2cm;
+    background: -moz-linear-gradient(45deg, rgba(145, 145, 151, 0.973) 0%, rgba(177, 177, 182, 0.904) 100%);
+    background: -webkit-linear-gradient(45deg, rgb(151, 148, 148) 0%, rgba(136, 130, 130, 0.904) 100%);
+    background: linear-gradient(45deg, rgb(129, 126, 126) 0%, rgba(231, 231, 231, 0.8) 100%);
+}
+.row2 {
+    height: 50%;
+}
+ion-icon {
+    margin-right: 1px;
+}
+ion-button {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+ion-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    top: 0px !important;
+}
+.alzaads{
+    height: 0%;
+    padding: 0px;
+    margin-top: 0cm;}

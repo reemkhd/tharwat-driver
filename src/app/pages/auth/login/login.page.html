@@ -1,0 +1,70 @@
+<ion-header  class="ion-no-border" >
+  <ion-toolbar>
+    <div   style="height: 40px"></div> 
+      <div  class="img-right">
+        <img  class="img-right"  src="../../../../assets/tharwat1.png"   
+        width="160mm"   height="80mm" />
+      </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="grid1">
+      <ion-row class="row1">
+          <ion-col>
+          </ion-col>
+      </ion-row>
+      <ion-row class="row2">
+          <ion-col>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+  <ion-slide >
+      <div class="contaier-login">
+        <div>
+        <form #form="ngForm" (ngSubmit)="login(form)" method="post">
+          <ion-grid>
+              <ion-row>
+                  <ion-col>
+                      <h1>تسجيل الدخول</h1>
+                  </ion-col>
+              </ion-row>
+              <ion-row> 
+                  <ion-col>
+                      <ion-list>
+                          <ion-item dir="rtl">
+                              <ion-icon  name="at-outline" class="icon-login"></ion-icon>
+                              <ion-input  ngModel type="email"  name="email" required placeholder="البريدالإكتروني"></ion-input>
+                          </ion-item>
+                          <br />
+                          <ion-item dir="rtl">  
+                              <ion-icon  name="eye-off-outline" class="icon-login"></ion-icon>
+                              <ion-input  ngModel type="password" name="password" required placeholder="كلمة المرور"></ion-input>
+                          </ion-item>
+                      </ion-list>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                    <ion-label>
+                      <h3  (click)="showForgetPassword()">نسيت كلمة المرور ؟</h3>
+                    </ion-label>
+                </ion-col>
+            </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-button type="submit"  color="medium" fill="solid" expand="full">
+                         تسجيل دخول
+                      </ion-button>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-label>
+                          <h3 (click)="registerModal()">تسجيل جديد</h3>
+                      </ion-label>
+                  </ion-col>
+              </ion-row>
+          </ion-grid></form></div>
+      </div>   
+</ion-slide> 
+</ion-content>

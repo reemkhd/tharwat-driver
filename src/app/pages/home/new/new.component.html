@@ -1,0 +1,65 @@
+<ion-header > 
+  <ion-content>
+    <ion-grid class="grid1"> 
+    <ion-list *ngFor ="let tag of donations_info"  >
+      <ion-item *ngIf="tag"> 
+        <ion-avatar slot="start">
+          <img
+            src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png"
+          />
+        </ion-avatar>
+        <ion-button expand="full" (click)="tutorialShown = !tutorialShown">
+          <span>{{ tag.order_number }}</span>
+        </ion-button>
+  
+        <ion-text *ngIf="tutorialShown">
+          <p>
+            {{ tag.furniture  === 'null' ? '' : ':أثاث' }}
+            {{ tag.furniture  === 'null' ? '' :tag.furniture }}
+          </p>
+  
+          <p>             
+            {{ tag.clothes  === 'null' ? '' : 'ملابس:' }}
+            {{ tag.clothes === 'null' ? '' : tag.clothes }}
+          </p> 
+          
+          <p>
+            {{ tag.dishes  === 'null' ? '' : 'أواني:' }}
+            {{ tag.dishes === 'null' ? '':tag.dishes }}
+          </p>
+  
+          <p>
+            {{ tag.electrical_tools  === 'null' ? '' : 'الأدوات الكهربائية:' }}
+            {{ tag.electrical_tools === 'null' ? '' : tag.electrical_tools }}
+          </p> 
+          
+          <p>
+            {{ tag.baby_things  === 'null' ? '' : 'مستلزمات الأطفال:' }}
+            {{ tag.baby_things === 'null' ? '' :tag.baby_things }}
+          </p>
+  
+          <p>
+            {{ tag.luxuries  === 'null' ? '' : 'الكماليات:' }}
+            {{ tag.luxuries === 'null' ? '' :tag. luxuries }}
+          </p>
+          
+          <p>
+            {{ tag.accessories_and_mobiles  === 'null' ? '' : 'إكسسوارات نسائية وجوالات:' }}
+            {{ tag.accessories_and_mobiles === 'null' ? '' :tag.accessories_and_mobiles }}
+          </p>
+  
+          <p>
+            {{ tag.medical_devices  === 'null' ? '' : 'أجهزة طبية:' }}
+            {{ tag.medical_devices=== 'null' ? '' :tag.medical_devices }}
+          </p>
+  
+          <p>
+            {{ tag.miscellaneous  === 'null' ? '' : 'متفرقات:' }}
+            {{ tag.miscellaneous=== 'null' ? '' :tag.miscellaneous }}
+          </p>
+  
+        </ion-text>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+  </ion-content>

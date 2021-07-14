@@ -1,0 +1,51 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <div style="height: 40px"></div>
+    <div class="img-right" style="padding-bottom: 20px; text-align: center">
+      <img
+        class="img-right"
+        src="../../../../assets/tharwat1.png"
+        width="160mm"
+        height="80mm"
+      />
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="grid1">
+    <ion-list>
+      <!-- *ngFor ="let tag of donations_info | slice:1" -->
+      <ion-item *ngFor="let order of orderList" (click)="presentModal()">
+        <ion-avatar slot="start">
+          <img
+            src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png"
+          />
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ order.name }}</h2>
+          <h3>{{ order.district }}</h3>
+          <p>{{ order.date }} - {{ order.time }}</p>
+        </ion-label>
+        <ion-avatar slot="end" *ngIf="order.assigned">
+          <ion-icon
+            style="
+              font-size: 25px;
+              margin: 8px;
+              color: white;
+              background-color: green;
+            "
+            name="checkmark-outline"
+          ></ion-icon>
+        </ion-avatar>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+</ion-content>

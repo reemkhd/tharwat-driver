@@ -1,0 +1,239 @@
+<!-- <ion-header  class="ion-no-border"> 
+  <ion-toolbar> -->
+    <!-- <ion-title>طلباتي</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons> -->
+    <!-- <ion-buttons slot="start">
+      
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <div style="height: 40px"></div>
+    <div class="img-right" style="padding-bottom: 20px; text-align: center">
+      <img
+        class="img-right"
+        src="../../../../assets/tharwat1.png"
+        width="160mm"
+        height="80mm"
+      />
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content> -->
+  <!-- <ion-grid class="grid1">
+    <ion-row class="row1">
+      <ion-col>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row2">
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+<!-- 
+  <ion-tabs> -->
+    <!-- Tab bar -->
+    <!-- <ion-tab-bar slot="top">
+      <ion-tab-button > الطلبات  </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  <ion-list *ngFor ="let tag of donations_info">
+    <ion-item *ngIf="tag"> 
+
+      <ion-button expand="full" (click)="tutorialShown = !tutorialShown">
+        <span>{{ tag.order_number }}</span>
+      </ion-button>
+
+      <ion-text *ngIf="tutorialShown">
+        <p>
+          {{ tag.furniture  === 'null' ? '' : ':أثاث' }}
+          {{ tag.furniture  === 'null' ? '' :tag.furniture }}
+        </p>
+
+        <p>             
+          {{ tag.clothes  === 'null' ? '' : 'ملابس:' }}
+          {{ tag.clothes === 'null' ? '' : tag.clothes }}
+        </p> 
+        
+        <p>
+          {{ tag.dishes  === 'null' ? '' : 'أواني:' }}
+          {{ tag.dishes === 'null' ? '':tag.dishes }}
+        </p>
+
+        <p>
+          {{ tag.electrical_tools  === 'null' ? '' : 'الأدوات الكهربائية:' }}
+          {{ tag.electrical_tools === 'null' ? '' : tag.electrical_tools }}
+        </p> 
+        
+        <p>
+          {{ tag.baby_things  === 'null' ? '' : 'مستلزمات الأطفال:' }}
+          {{ tag.baby_things === 'null' ? '' :tag.baby_things }}
+        </p>
+
+        <p>
+          {{ tag.luxuries  === 'null' ? '' : 'الكماليات:' }}
+          {{ tag.luxuries === 'null' ? '' :tag. luxuries }}
+        </p>
+        
+        <p>
+          {{ tag.accessories_and_mobiles  === 'null' ? '' : 'إكسسوارات نسائية وجوالات:' }}
+          {{ tag.accessories_and_mobiles === 'null' ? '' :tag.accessories_and_mobiles }}
+        </p>
+
+        <p>
+          {{ tag.medical_devices  === 'null' ? '' : 'أجهزة طبية:' }}
+          {{ tag.medical_devices=== 'null' ? '' :tag.medical_devices }}
+        </p>
+
+        <p>
+          {{ tag.miscellaneous  === 'null' ? '' : 'متفرقات:' }}
+          {{ tag.miscellaneous=== 'null' ? '' :tag.miscellaneous }}
+        </p>
+
+      </ion-text>
+    </ion-item>
+  </ion-list>
+</ion-content> -->
+
+  <!-- <ion-text *ngIf="tutorialShown1">
+
+  <ion-list *ngFor ="let tag of donations_info">
+    <ion-item *ngIf="tag"> 
+
+      <div>
+        <ion-row>
+          <ion-col>
+            <p>
+              {{ tag.furniture  === 'null' ? '' : ':أثاث' }}
+              {{ tag.furniture  === 'null' ? '' :tag.furniture }}
+            </p>
+          </ion-col>
+        </ion-row>
+      </div>
+    
+      <div>
+        <ion-row>
+          <ion-col>
+            <p>             
+              {{ tag.clothes  === 'null' ? '' : 'ملابس:' }}
+              {{ tag.clothes === 'null' ? '' : tag.clothes }}
+            </p> 
+          </ion-col>
+        </ion-row> 
+      </div>
+    
+      <div>
+        <ion-row>
+          <ion-col>
+            <p>
+              {{ tag.dishes  === 'null' ? '' : 'أواني:' }}
+              {{ tag.dishes === 'null' ? '':tag.dishes }}
+            </p>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div>
+        <ion-row>
+          <ion-col>
+            <p>
+              {{ tag.electrical_tools  === 'null' ? '' : 'الأدوات الكهربائية:' }}
+              {{ tag.electrical_tools === 'null' ? '' : tag.electrical_tools }}
+            </p> 
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div>
+        <ion-row>
+          <ion-col>
+            <p>
+              {{ tag.baby_things  === 'null' ? '' : 'مستلزمات الأطفال:' }}
+              {{ tag.baby_things === 'null' ? '' :tag.baby_things }}
+            </p>
+          </ion-col>
+        </ion-row>
+      </div> 
+
+      <div>
+        <ion-row>
+          <ion-col>
+            <p>
+              {{ tag.luxuries  === 'null' ? '' : 'الكماليات:' }}
+              {{ tag.luxuries === 'null' ? '' :tag. luxuries }}
+            </p>
+          </ion-col>
+        </ion-row>
+      </div> 
+
+      <div>
+        <ion-row>
+          <ion-col>
+            <p>
+              {{ tag.accessories_and_mobiles  === 'null' ? '' : 'إكسسوارات نسائية وجوالات:' }}
+              {{ tag.accessories_and_mobiles === 'null' ? '' :tag.accessories_and_mobiles }}
+            </p>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div>
+        <ion-row>
+          <ion-col>
+            <p>
+              {{ tag.medical_devices  === 'null' ? '' : 'أجهزة طبية:' }}
+              {{ tag.medical_devices=== 'null' ? '' :tag.medical_devices }}
+            </p>
+          </ion-col>
+        </ion-row>
+      </div>
+      
+      <div>
+        <ion-row>
+          <ion-col>
+            <p>
+              {{ tag.miscellaneous  === 'null' ? '' : 'متفرقات:' }}
+              {{ tag.miscellaneous=== 'null' ? '' :tag.miscellaneous }}
+            </p>
+          </ion-col>
+        </ion-row>
+      </div> 
+    
+    </ion-item>
+  </ion-list>
+
+  </ion-text>
+</ion-content>
+     -->
+     <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="goBack()">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-toolbar>
+        <div style="height: 40px"></div>
+        <div class="img-right" style="padding-bottom: 20px; text-align: center">
+          <img
+            class="img-right"
+            src="../../../../assets/tharwat1.png"
+            width="160mm"
+            height="80mm"
+          />
+        </div>
+      </ion-toolbar>
+    </ion-header>
+    
+    <ion-content>
+      <ion-tabs>
+        <!-- Tab bar -->
+        <ion-tab-bar slot="top" selectedTab="new">
+          <ion-tab-button tab="new"> الطلبات الجديدة </ion-tab-button>
+       
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-content>

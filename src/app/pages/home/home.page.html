@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>الصفحة الرئسية</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="grid1">
+    <ion-row class="row1">
+    
+        <ion-col  >
+          <ion-button  href="/donation" 
+          class="ion-button"  
+           expand="block"
+            color="white" >طلب جديد
+          </ion-button>
+   
+          <ion-button  href="/home/orders" 
+          class="ion-button2"   
+          expand="block" 
+          color="white" >طلباتي
+        </ion-button>
+          <ion-button   (click)="logout()" 
+          class="ion-button3"  
+           expand="block" 
+           color="white" >
+           تسجيل خروج</ion-button>
+        </ion-col>
+    </ion-row> 
+     
+  </ion-grid>
+ 
+  <!-- <ion-button href="/orders">Orders</ion-button> -->
+</ion-content>
+ 

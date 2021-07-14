@@ -1,0 +1,21 @@
+
+<ion-content>
+  <ion-grid class="grid1">
+    <ion-list>
+      <ion-item *ngFor="let order of order_info" >
+      <!-- <ion-item *ngFor="let order of order_info"> -->
+        <!-- <ion-item *ngFor="let connect of connect_info"> -->
+        <ion-avatar slot="start">
+          <img
+            src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png"
+            />
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ order.order_number }}</h2>
+            <p>{{ order.status }}</p>
+            <!-- <p>{{ connect.birth_date }} - {{ connect.time }}</p><br> -->
+          </ion-label>
+        </ion-item>
+      <!-- </ion-item> -->
+      </ion-list><br>
+    </ion-grid>

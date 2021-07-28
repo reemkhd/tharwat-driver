@@ -8,6 +8,7 @@ import { Connect_info } from 'src/app/models/connectinfo';
 import { AuthService } from 'src/app/services/auth.service';
 import { EnvService } from 'src/app/services/env.service';
 import { AlertService } from 'src/app/services/alert.service';
+import { ParamService } from 'src/app/services/param.service';
 
 @Component({
   selector: 'app-new',
@@ -16,8 +17,13 @@ import { AlertService } from 'src/app/services/alert.service';
 })
 export class NewComponent implements OnInit {
 
-  order_info:Driver[];
-  connect_info:Connect_info;
+  order_info: Driver[];
+  connect_info: Connect_info;
+
+
+  order_number: any;
+  users: [{order_number:number}];
+
 
   constructor(
     public modalController: ModalController,
@@ -26,27 +32,38 @@ export class NewComponent implements OnInit {
     private authService: AuthService,
     private env: EnvService,
     private alertService: AlertService,
+    private param : ParamService,
     ) { }
 
   ngOnInit() {}
 
-  async presentModal() {
+  async presentModal($event, order_number) {
+    this.param.order_number = order_number
+    console.log('param order_number:', this.param.order_number);
     const modal = await this.modalController.create({
       component: OrderDetailsComponent,
       cssClass: 'my-custom-class'
     });
     return await modal.present();
   }
+  
+  
 
   ionViewWillEnter() {
+    this.param.order_number = this.order_number;
+
     this.httpService.makeGet('auth/api_receive_orders_wait').subscribe(
       order_info => {
         this.order_info = order_info;
-        console.log(order_info);
-      }
-    )
+        console.log('order_info: ', this.order_info);
+      },
+      error => {
+        console.log(error);
+        this.alertService.presentToast(error['message']);
+      },
+    );
 
-    this.httpService.makeGet('auth/destroy').subscribe(
+    this.httpService.makeGet('auth/receive_infoconnect').subscribe(
       connect_info => {
         this.connect_info = connect_info;
         console.log(connect_info);

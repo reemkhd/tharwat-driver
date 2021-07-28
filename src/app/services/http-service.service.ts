@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient ,HttpHeaders, HttpParams} from '@angular/common/http';
 import { EnvService } from './env.service';
 import{AuthService} from './auth.service';
 import { Observable, of } from 'rxjs';
@@ -50,7 +50,21 @@ export class HttpServiceService {
       tap(data => console.log(this.env.API_URL +endpoint))
     )
   }
-
+  get(endpoint: string): Observable<any> {
+    return this.http.get<any>(this.env.API_URL +endpoint)
+      .pipe(
+        tap(data => console.log(this.env.API_URL +endpoint)),
+        catchError(this.handleError('getData', []))
+      );
+  }
+  getWithParam(endpoint: string, param: any , name: any): Observable<any> {
+    let params = new HttpParams().set(name,param); //Create new HttpParams
+    return this.http.get<any>(this.env.API_URL +endpoint, {params:params})
+      .pipe(
+        tap(data => console.log(this.env.API_URL +endpoint)),
+        catchError(this.handleError('getData', []))
+      );
+  }
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 

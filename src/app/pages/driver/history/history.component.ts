@@ -48,9 +48,6 @@ export class HistoryComponent implements OnInit {
     )
 
     this.httpService.makeGet('auth/receive_infoconnect').subscribe(
-      // user => {
-      //   this.user = user;
-      // },
       connect_info => {
         this.connect_info = connect_info;
         console.log(connect_info);

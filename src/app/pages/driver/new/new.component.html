@@ -4,7 +4,7 @@
     <div>
 
 
-      <ion-item *ngFor="let order of order_info " (click)="presentModal()">
+      <ion-item *ngFor="let order of order_info " (click)="presentModal($event, order.order_number)">
 
           <ion-avatar slot="start">
             <img
@@ -14,13 +14,12 @@
 
           <ion-label>
             <h2>{{ order.order_number }}</h2>
-            <br>
+            
             <p>{{ order.status }}</p>
-            <br>
 
             <div *ngFor="let connect of connect_info">
             <div *ngIf="order.order_number == connect.order_number">
-              <p>{{ connect.birth_date }} - {{ connect.time }}</p><br>
+              <p>{{ connect.birth_date }} - {{ connect.time }}</p>
             </div>
           </div>
 

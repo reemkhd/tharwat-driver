@@ -13,7 +13,13 @@
           <ion-label>
             <h2>{{ order.order_number }}</h2>
             <p>{{ order.status }}</p>
-            <!-- <p>{{ connect.birth_date }} - {{ connect.time }}</p><br> -->
+
+            <div *ngFor="let connect of connect_info">
+              <div *ngIf="order.order_number == connect.order_number">
+                <p>{{ connect.birth_date }} - {{ connect.time }}</p>
+              </div>
+            </div>
+          
           </ion-label>
         </ion-item>
       <!-- </ion-item> -->
